@@ -2,10 +2,10 @@ from flask import Flask, render_template, request, jsonify, session
 import google.generativeai as genai
 
 app = Flask(__name__)
-app.secret_key = ""  # Change this to a strong secret key
+app.secret_key = "AIzaSyA86DrqeNL9D-Fvd6ghIJsHlt5k1MrYnKM"  # Change this to a strong secret key
 
 # Initialize Gemini AI Client
-genai.configure(api_key="")  # Replace with your actual API key
+genai.configure(api_key="AIzaSyA86DrqeNL9D-Fvd6ghIJsHlt5k1MrYnKM")  # Replace with your actual API key
 model = genai.GenerativeModel("gemini-pro")  # Ensure the correct model is used
 
 def get_gemini_response(prompt, history):
