@@ -9,7 +9,7 @@
     <style>
         /* Beautiful animated background */
         body {
-            background: linear-gradient(-45deg, #f5f5f7, #f5f5f7, #f5f5f7,#f5f5f7);
+            background: linear-gradient(-45deg, #f5f5f7, #f5f5f7, #f5f5f7, #f5f5f7);
             background-size: 400% 400%;
             animation: gradientMove 8s ease infinite;
             color: white;
@@ -70,7 +70,7 @@
             word-wrap: break-word;
             font-size: 14px;
             line-height: 1.4;
-            white-space: pre-line; /* Fixes the alignment issue */
+            white-space: pre-line;
             text-align: left;
             animation: fadeIn 0.5s ease-in-out;
         }
@@ -191,7 +191,8 @@
                     showTypingIndicator();
 
                     $.ajax({
-                        url: 'https://ai-chatbot-mrew.onrender.com/',
+                        // Update the URL to point to your backend API on Render:
+                        url: 'https://ai-chatbot-mrew.onrender.com/api/chat',
                         type: 'POST',
                         data: { prompt: userPrompt },
                         dataType: 'json',
@@ -201,7 +202,7 @@
                         },
                         error: function () {
                             removeTypingIndicator();
-                            alert('Error communicating with server.');
+                            alert('Error communicating with the server.');
                         }
                     });
                 }
