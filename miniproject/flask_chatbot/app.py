@@ -6,10 +6,10 @@ import os
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-app.secret_key = "AIzaSyA86DrqeNL9D-Fvd6ghIJsHlt5k1MrYnKM"  # Replace with a strong secret key
+app.secret_key = " "  # Replace with a strong secret key
 
 # Initialize Gemini AI Client
-genai.configure(api_key="AIzaSyA86DrqeNL9D-Fvd6ghIJsHlt5k1MrYnKM")  # Replace with your actual API key
+genai.configure(api_key=" ")  # Replace with your actual API key
 model = genai.GenerativeModel("gemini-pro")  # Ensure you're using the correct model
 
 def get_gemini_response(prompt, history):
